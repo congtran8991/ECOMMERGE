@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // /**
 //  * category router
@@ -27,6 +27,10 @@ module.exports = {
         method: 'GET',
         path: '/categories1', // Only match when the URL parameter is composed of lowercase letters
         handler: 'category.findByCategory1',
+        config: {
+            policies: [],
+            middlewares: [],
+          },
       }
     ]
   }

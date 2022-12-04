@@ -1,14 +1,13 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "promotions",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
-    "description": ""
+    "singularName": "promotion",
+    "pluralName": "promotions",
+    "displayName": "Promotion"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -23,8 +22,7 @@
         }
       },
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "amount": {
       "pluginOptions": {
@@ -32,26 +30,7 @@
           "localized": true
         }
       },
-      "type": "integer"
-    },
-    "price": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "default": "0",
-      "required": true,
-      "min": "1"
-    },
-    "size": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
+      "type": "biginteger"
     },
     "description": {
       "pluginOptions": {
@@ -61,7 +40,27 @@
       },
       "type": "text"
     },
-    "oldPrice": {
+    "code": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "unit": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "max": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -69,49 +68,35 @@
       },
       "type": "biginteger"
     },
-    "option": {
+    "min": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "json"
+      "type": "biginteger"
     },
-    "public": {
+    "quota": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "boolean",
-      "default": false,
-      "required": true
+      "type": "biginteger"
     },
-    "images": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+    "expired": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "biginteger"
     },
-    "categories": {
+    "products": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
-    "promotions": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::promotion.promotion",
-      "inversedBy": "products"
+      "target": "api::product.product",
+      "inversedBy": "promotions"
     }
   }
 }

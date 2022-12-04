@@ -6,12 +6,15 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::category.category', () => ({
+module.exports = createCoreController('api::category.category', ({strapi}) => ({
     async findByCategory(ctx, next){
-        ctx.send({msg: "hdvhbdhvdbvbhdd"})
+        const entries = await strapi.db.query('api::category.category').findOne({populate: { category: true },})
+        console.log("entries", entries)
+        
     },
     async findByCategory1(ctx, next){
-        const { data, meta } = await super.find(ctx);
-        return { data, meta };
+        const data = await super.find(ctx);
+        const entries = await strapi.db.query('api::category.category').findMany({populate: true})
+        return entries
     },
 }));
