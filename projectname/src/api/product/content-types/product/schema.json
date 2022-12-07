@@ -45,14 +45,6 @@
       "required": true,
       "min": "1"
     },
-    "size": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "description": {
       "pluginOptions": {
         "i18n": {
@@ -111,7 +103,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::promotion.promotion",
-      "inversedBy": "products"
+      "mappedBy": "products"
     }
   }
 }

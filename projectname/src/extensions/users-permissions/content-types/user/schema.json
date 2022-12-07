@@ -69,6 +69,18 @@
     "public": {
       "type": "boolean",
       "default": true
+    },
+    "promotions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::promotion.promotion",
+      "inversedBy": "users"
+    },
+    "phone": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true,
+      "max": "11"
     }
   }
 }
