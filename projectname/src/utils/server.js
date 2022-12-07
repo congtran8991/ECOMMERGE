@@ -1,26 +1,26 @@
 const isPhone = (str) => {
-    str = str + ""
-    if (str.length > 11 || str.length < 10) return false
-    return Number.isInteger(+str)
-}
-
-const isEmail = (str) => {
-	return /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.['a-z0-9!#$%&*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(
-		str
-	);
+  str = str + "";
+  if (str.length > 11 || str.length < 10) return false;
+  return Number.isInteger(+str);
 };
 
-const isValidateUserName = (str) => {
-    return str.length > 7 && str.length < 16
-} 
+const isEmail = (str) => {
+  return /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.['a-z0-9!#$%&*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(
+    str
+  );
+};
 
-const isValidatePassWord = (str)=> {
-    return str.length > 7 && str.lenght < 20
-}
+const isValidUserName = (str) => {
+  return str.length > 7 && str.length < 16;
+};
+
+const isValidPassWord = (str) => {
+  return str.length > 7 && str.length < 20;
+};
 
 module.exports = {
-   isPhone,
-   isEmail,
-   isValidateUserName,
-   isValidatePassWord
-}
+  isPhone,
+  isEmail,
+  isValidUserName,
+  isValidPassWord,
+};
