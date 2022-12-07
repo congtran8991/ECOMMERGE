@@ -12,7 +12,7 @@ module.exports = {
     try {
       const requestBody = ctx.request.body;
       const { username, email, password, phone } = requestBody;
-      if (!(username || email || password || phone)) throw message.invalid_data;
+      if (!username || !email || !password || !phone) throw message.invalid_data;
       if (
         !(
           helper.isEmail(email) &&
