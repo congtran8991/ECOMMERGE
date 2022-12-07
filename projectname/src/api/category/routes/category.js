@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // /**
 //  * category router
@@ -20,23 +20,13 @@ module.exports = {
     routes: [
       {
         method: 'GET',
-        path: '/categories',
-        handler: 'category.findMany',
-        config: {
-            policies: [],
-            middlewares: [],
-            auth: false
-          },
+        path: '/categories', // Only match when the URL parameter is composed of lowercase letters
+        handler: 'category.findByCategory',
       },
       {
         method: 'GET',
-        path: '/categories/:id',
-        handler: 'category.findOne',
-        config: {
-            policies: [],
-            middlewares: [],
-            auth: false
-          },
+        path: '/categories1', // Only match when the URL parameter is composed of lowercase letters
+        handler: 'category.findByCategory1',
       }
     ]
   }

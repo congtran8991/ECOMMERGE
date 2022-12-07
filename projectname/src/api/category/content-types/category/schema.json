@@ -26,21 +26,13 @@
       "required": true,
       "unique": true
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+    "image": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "text"
     },
     "description": {
       "pluginOptions": {
@@ -58,26 +50,28 @@
       },
       "type": "text"
     },
-    "parenId": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
-    },
-    "public": {
+    "active": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "boolean",
-      "default": true,
-      "required": true
+      "default": true
+    },
+    "parentId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     },
     "products": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "mappedBy": "categories"
+      "mappedBy": "category"
     }
   }
 }

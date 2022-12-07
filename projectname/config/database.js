@@ -1,13 +1,21 @@
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
+    // connection: {
+    //   host: env('DATABASE_HOST', '127.0.0.1'),
+    //   port: env.int('DATABASE_PORT', 5432),
+    //   database: env('DATABASE_NAME', 'postgres'),
+    //   // user: env('DATABASE_USERNAME', 'congtraan'),
+    //   password: env('DATABASE_PASSWORD', 'congtran98#'),
+    //   ssl: env.bool('DATABASE_SSL', false),
+    // },
     connection: {
-      host: env('DATABASE_HOST'),
-      port: env.int('DATABASE_PORT'),
-      database: env('DATABASE_NAME'),
-      user: env('DATABASE_USERNAME'),
-      password: env('DATABASE_PASSWORD'),
-      ssl: env.bool('DATABASE_SSL')
+      host: env('DATABASE_HOST', '127.0.0.1'),
+      port: env.int('DATABASE_PORT', 5432),
+      database: env('DATABASE_NAME', 'strapi_ecommerge'),
+      user: env('DATABASE_USERNAME', 'macintosh'),
+      password: env('DATABASE_PASSWORD', 'postgres'),
+      ssl: env.bool('DATABASE_SSL', false),
     },
   },
 });

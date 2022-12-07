@@ -55,14 +55,3 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
-
-
-----------------------------------------
-
-SETUP SRC DƯỚI LOCAL
-
-- Download docker
-- Download DBeaver (Ko cần thiết cũng được-> dùng để xem dataDB) -> 
-- Open cmd pointing to folder containing source -> run "docker-compose -f postgres-docker-compose.yml up"
-- yarn 
-- yarn develop
