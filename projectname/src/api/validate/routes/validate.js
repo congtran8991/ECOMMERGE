@@ -9,5 +9,14 @@ module.exports = {
        middlewares: [],
      },
     },
+    {
+      method: 'POST',
+      path: '/token/verify',
+      handler: 'validate.tokenVerify',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };
