@@ -11,8 +11,8 @@ module.exports = {
     },
     {
       method: 'POST',
-      path: '/token/decrypt',
-      handler: 'validate.tokenDecrypt',
+      path: '/token/verify',
+      handler: 'validate.tokenVerify',
       config: {
         policies: [],
         middlewares: [],

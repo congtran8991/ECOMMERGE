@@ -36,11 +36,10 @@ module.exports = {
       });
     }
   },
-  tokenDecrypt: async (ctx) => {
+  tokenVerify: async (ctx) => {
     const { token } = ctx.request.body;
     try {
       if (!token) throw message.authen_failed;
-      // return ctx.badRequest("`token` param is missing");
       // decrypt the jwt
       const resultData = await strapi.plugins[
         "users-permissions"
@@ -52,10 +51,7 @@ module.exports = {
         data: resultData,
       });
       // send the decrypted object
-      // return obj;
     } catch (error) {
-      // if the token is not a valid token it will throw and error
-      // return ctx.badRequest(err.toString());
       ctx.send({
         status: 400,
         message: error.toString(),
