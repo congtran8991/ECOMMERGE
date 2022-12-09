@@ -9,5 +9,14 @@ module.exports = {
        middlewares: [],
      },
     },
+    {
+      method: 'POST',
+      path: '/token/decrypt',
+      handler: 'validate.tokenDecrypt',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };
