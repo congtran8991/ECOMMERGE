@@ -79,7 +79,8 @@
     "phone": {
       "type": "biginteger",
       "unique": true,
-      "required": true
+      "required": true,
+      "max": "11"
     }
   }
 }
