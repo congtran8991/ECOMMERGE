@@ -13,7 +13,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <ChakraProvider>
-        <div className="min-w-[1400px]">
+        {/* <div className="min-w-[1400px]"> */}
+        <div>
         <Header />
         <Component {...pageProps} />
         <Footer />

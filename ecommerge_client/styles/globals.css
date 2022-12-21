@@ -4,6 +4,7 @@
 
 html,
 body {
+  background-color: #f5f5fa !important;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -31,10 +32,16 @@ a {
 
 :root {
   --clr-white: #ffffff;
+  --clr-black-primary: #475569;
+  --clr-green-primary: #2c7a7b;
+  --clr-green-second: #ccfbf1;
+  --clr-gray-primary: #f1f5f9;
+  --clr-gray-second: #767676;
+  --clr-gray-third : #d1d5db;
 }
 
 .bg-dashboard {
-  background: #2c7a7b;
+  background: var(--clr-green-primary);
 }
 
 .custom-container {

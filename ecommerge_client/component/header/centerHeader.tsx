@@ -12,6 +12,7 @@ export default function CenterHeader() {
   return (
     <div style={{maxWidth: "70rem"}} className="header-center w-full flex  ml-5">
       <Input
+        borderRadius={0}
         border={"1px"}
         borderColor="var(--clr-white)"
         className="search-input mr-3"
@@ -20,6 +21,7 @@ export default function CenterHeader() {
         variant={""}
       />
       <Button
+      borderRadius={0}
         className="text-white"
         color="var(--clr-white)"
         border={"1px"}
