@@ -1,16 +1,11 @@
 import {
-  Grid,
-  GridItem,
   Flex,
   Box,
-  Image,
-  Text,
-  Divider,
 } from "@chakra-ui/react";
-import Picture from "../../components/detailProduct/Picture";
-import InformationProduct from "../../components/detailProduct/Information";
-import Detail from "../../components/detailProduct/Detail";
-import DescriptionProduct from "../../components/detailProduct/Description";
+import Picture from "components/detailProduct/Picture";
+import InformationProduct from "components/detailProduct/Information";
+import Detail from "components/detailProduct/Detail";
+import DescriptionProduct from "components/detailProduct/Description";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -33,13 +28,13 @@ export default function DetailProduct() {
       </Box>
       <Box
         boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-        className="mt-5 bg-zinc-50 rounded Chi tiết sản phẩm"
+        className="mt-5 bg-zinc-50 rounded"
       >
         <Detail />
       </Box>
       <Box
         boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-        className="mt-5 bg-zinc-50 rounded Chi tiết sản phẩm"
+        className="mt-5 bg-zinc-50 rounded"
       >
         <DescriptionProduct />
       </Box>

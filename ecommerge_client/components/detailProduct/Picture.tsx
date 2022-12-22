@@ -1,21 +1,23 @@
 import { Box, Image } from "@chakra-ui/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import PictureItem from "../item/PictureItem";
-import { NavigationOptions, GridOptions } from "swiper/types";
+import { NavigationOptions } from "swiper/types";
 import { Grid, Pagination, Mousewheel, Navigation } from "swiper";
-import { Avatar } from "@chakra-ui/react";
 
 export default function PictureProduct() {
   return (
     <Box width={["100%", "100%", "100%", "40%"]} className="img">
-      <Image
-        width={"100%"}
-        src="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-de-thuong.jpg"
-        alt="Dan Abramov"
-      />
-      
+      <Box>
+        <Image
+          width={"auto"}
+          height={"auto"}
+          src="https://kenh14cdn.com/thumb_w/620/2020/5/28/0-1590653959375414280410.jpg"
+          alt="Dan Abramov"
+        />
+      </Box>
+      <Box>
         <Swiper
-        spaceBetween={15}
+          spaceBetween={10}
           slidesPerView={5}
           mousewheel={true}
           navigation={
@@ -33,7 +35,7 @@ export default function PictureProduct() {
           <PictureItem />
           <PictureItem />
         </Swiper>
-      
+      </Box>
     </Box>
   );
 }
