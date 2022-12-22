@@ -1,6 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import PictureItem from "../../component/item/pictureItem";
+import PictureItem from "../item/PictureItem";
 import { NavigationOptions, GridOptions } from "swiper/types";
 import { Grid, Pagination, Mousewheel, Navigation } from "swiper";
 import { Avatar } from "@chakra-ui/react";

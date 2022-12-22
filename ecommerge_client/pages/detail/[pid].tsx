@@ -7,10 +7,10 @@ import {
   Text,
   Divider,
 } from "@chakra-ui/react";
-import Picture from "../../component/detailProduct/picture";
-import InformationProduct from "../../component/detailProduct/information";
-import Detail from "../../component/detailProduct/detail";
-import DescriptionProduct from "../../component/detailProduct/description";
+import Picture from "../../components/detailProduct/Picture";
+import InformationProduct from "../../components/detailProduct/Information";
+import Detail from "../../components/detailProduct/Detail";
+import DescriptionProduct from "../../components/detailProduct/Description";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

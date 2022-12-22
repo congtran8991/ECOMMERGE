@@ -1,5 +1,5 @@
 import { Grid, Card, CardBody, Text, CardHeader } from "@chakra-ui/react";
-import ProductItem from "../component/item/productItem";
+import ProductItem from "./item/ProductItem";
 
 export default function Home() {
   return (

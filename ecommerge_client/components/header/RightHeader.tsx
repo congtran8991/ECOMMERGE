@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import { faCartFlatbed, faUser } from "@fortawesome/free-solid-svg-icons";
-import Login from "../../component/login";
-import Register from "../../component/register";
+import Login from "../Login";
+import Register from "../Register";
 
 export default function RightHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure();

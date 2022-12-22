@@ -1,7 +1,7 @@
 
-import LeftHeader from "../component/header/leftHeader";
-import CenterHeader from "../component/header/centerHeader";
-import RightHeader from "../component/header/rightHeader";
+import LeftHeader from "./header/LeftHeader";
+import CenterHeader from "./header/CenterHeader";
+import RightHeader from "./header/RightHeader";
 
 export default function Home() {
   return (

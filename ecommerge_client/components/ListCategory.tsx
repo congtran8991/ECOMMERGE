@@ -1,10 +1,10 @@
-import HomeCarousel from "../component/homeCarousel";
-import ListProduct from "../component/listProduct";
+import HomeCarousel from "./HomeCarousel";
+import ListProduct from "./ListProduct";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Pagination, Mousewheel, Navigation } from "swiper";
 import { NavigationOptions, GridOptions } from "swiper/types";
 import { Avatar, Card, CardBody, CardHeader, Text } from "@chakra-ui/react";
-import CategoryItem from "../component/item/categoryItem";
+import CategoryItem from "./item/CategoryItem";
 
 export default function Home() {
   return (
