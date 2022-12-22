@@ -1,13 +1,16 @@
+import { Box } from "@chakra-ui/react";
 import HomeCarousel from "components/HomeCarousel";
 import ListProduct from "components/ListProduct";
-import ListCategory from "components/ListCategory"
+import ListCategory from "components/ListCategory";
 
 export default function Home() {
   return (
-    <div>
+    <Box>
       <HomeCarousel />
-      <ListCategory />
-      <ListProduct />
-    </div>
+      <Box paddingX={3}>
+        <ListCategory />
+        <ListProduct />
+      </Box>
+    </Box>
   );
 }

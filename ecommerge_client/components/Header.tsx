@@ -1,16 +1,16 @@
-import { Box } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react";
 import LeftHeader from "./header/LeftHeader";
 import CenterHeader from "./header/CenterHeader";
 import RightHeader from "./header/RightHeader";
 
-export default function Home() {
+export default function Header() {
   return (
-    <Box className="header bg-dashboard">
-        <Box className="w-4/5 mx-auto header-wrapper h-24 flex items-center">
-            <LeftHeader/>
-            <CenterHeader/>
-            <RightHeader/>
-        </Box>
+    <Box bg={"var(--clr-green-primary)"}>
+      <Box display={"flex"} alignItems={"center"}  width={"80%"} marginX={"auto"} height={24}>
+        <LeftHeader />
+        <CenterHeader />
+        <RightHeader />
+      </Box>
     </Box>
   );
 }

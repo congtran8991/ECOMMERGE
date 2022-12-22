@@ -6,15 +6,15 @@ import { NavigationOptions, GridOptions } from "swiper/types";
 import { Avatar, Card, CardBody, CardHeader, Text } from "@chakra-ui/react";
 import CategoryItem from "./item/CategoryItem";
 
-export default function Home() {
+export default function ListCategory() {
   return (
-    <Card className="border border-gray-300 w-4/5 mx-auto mt-5">
-      <CardHeader
-        style={{ padding: "10px" }}
-        bgSize={"sm"}
-        borderBottom="1px"
-        borderColor="gray.300"
-      >
+    <Card
+      width={"80%"}
+      marginX={"auto"}
+      mt={5}
+      border={"1px solid var(--clr-gray-third)"}
+    >
+      <CardHeader p={3} bgSize={"sm"} borderBottom="1px" borderColor="gray.300">
         <Text
           fontSize="xl"
           fontWeight="bold"

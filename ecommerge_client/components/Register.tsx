@@ -19,6 +19,10 @@ interface props {
   isOpenRegister: boolean;
   setIsOpenRegister: any;
 }
+
+const theme = {
+  
+}
 export default function Register(props: props) {
   const { isOpenRegister, setIsOpenRegister } = props;
   return (
