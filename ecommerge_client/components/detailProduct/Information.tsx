@@ -150,7 +150,7 @@ export default function InformationProduct() {
           <Text width={150}>Số lượng</Text>
           <Box display={"flex"}>
             <Button size={"sm"} borderRadius={0} border={"1px"} borderColor={"var(--clr-gray-third)"}>+</Button>
-            <Input size={"sm"} textAlign={"center"} value={1} borderRadius={0} width="70px"/>
+            <Input size={"sm"} textAlign={"center"} borderRadius={0} width="70px"/>
             <Button size={"sm"} borderRadius={0} border={"1px"} borderColor={"var(--clr-gray-third)"}>-</Button>
           </Box>
         </Box>

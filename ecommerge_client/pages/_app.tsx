@@ -1,13 +1,14 @@
 
 import React from "react";
-import "styles/globals.css";
-import "tailwindcss/tailwind.css";
 import { store } from "store/store";
 import { Provider } from "react-redux";
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import "tailwindcss/tailwind.css";
+import "styles/globals.scss"
+
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
