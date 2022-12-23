@@ -1,7 +1,4 @@
-import {
-  Flex,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import Picture from "components/detailProduct/Picture";
 import InformationProduct from "components/detailProduct/Information";
 import Detail from "components/detailProduct/Detail";
@@ -11,16 +8,17 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 export default function DetailProduct() {
   return (
-    <div className="w-4/5 mx-auto">
-      <div className="mt-3 mb-3 text-gray-400">Breadcum</div>
+    <Box width={"80%"} marginX={"auto"}>
+      <Box mt={3} mb={3}>Breadcum</Box>
       <Box
         boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-        className="bg-zinc-50 rounded"
+        bg={"var(--clr-gray-primary)"}
       >
         <Flex
-          className="p-5"
+          p={5}
           gap={2}
           direction={["column", "column", "column", "row"]}
+          border={"1px solid var(--clr-gray-third)"}
         >
           <Picture />
           <InformationProduct />
@@ -28,16 +26,20 @@ export default function DetailProduct() {
       </Box>
       <Box
         boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-        className="mt-5 bg-zinc-50 rounded"
+        mt={5}
+        bg={"var(--clr-gray-primary)"}
+        border={"1px solid var(--clr-gray-third)"}
       >
         <Detail />
       </Box>
       <Box
         boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-        className="mt-5 bg-zinc-50 rounded"
+        border={"1px solid var(--clr-gray-third)"}
+        bg={"var(--clr-gray-primary)"}
+        mt={5}
       >
         <DescriptionProduct />
       </Box>
-    </div>
+    </Box>
   );
 }

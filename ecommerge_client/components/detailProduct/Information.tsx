@@ -2,7 +2,7 @@ import { Text, Box, Badge, Button, Input } from "@chakra-ui/react";
 
 export default function InformationProduct() {
   return (
-    <Box width={["100%", "100%", "100%", "60%"]} className="info pl-5 pr-5">
+    <Box width={["100%", "100%", "100%", "60%"]} paddingX={5}>
       <Box className="header">
         <Box>
           <Text fontWeight={"bold"} fontSize={22}>

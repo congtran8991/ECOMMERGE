@@ -27,6 +27,7 @@ export default function ListCategory() {
       <CardBody>
         <Swiper
           slidesPerView={9}
+          spaceBetween={10}
           mousewheel={true}
           navigation={
             {

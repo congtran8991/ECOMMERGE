@@ -1,17 +1,17 @@
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import { Avatar } from "@chakra-ui/react";
+import { Avatar, Box } from "@chakra-ui/react";
 
 const CategoryItem = () => {
   return (  
     <SwiperSlide>
-      <div className="p-2 w-full text-center border border-gray-300">
+      <Box textAlign={"center"} p={2} width={"100%"} border={"1px solid var(--clr-gray-third)"}>
         <Avatar
           size="lg"
           name="Prosper Otemuyiwa"
           src="https://bit.ly/prosper-baba"
         />
-      </div>
+      </Box>
     </SwiperSlide>
   );
 };

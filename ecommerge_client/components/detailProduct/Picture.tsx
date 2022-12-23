@@ -26,7 +26,8 @@ export default function PictureProduct() {
             } as NavigationOptions
           }
           modules={[Grid, Mousewheel, Navigation]}
-          className="mySwiper mt-4"
+          className="mySwiper"
+          style={{marginTop: 20}}
         >
           <PictureItem />
           <PictureItem />
