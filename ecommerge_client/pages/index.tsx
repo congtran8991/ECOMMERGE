@@ -1,17 +1,16 @@
-import HomeCarousel from "../component/homeCarousel";
-import ListProduct from "../component/listProduct";
-import ListCategory from "../component/listCategory"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Pagination, Mousewheel, Navigation } from "swiper";
-import { NavigationOptions, GridOptions } from "swiper/types";
-import { Avatar } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import HomeCarousel from "components/HomeCarousel";
+import ListProduct from "components/ListProduct";
+import ListCategory from "components/ListCategory";
 
 export default function Home() {
   return (
-    <div>
+    <Box>
       <HomeCarousel />
-      <ListCategory />
-      <ListProduct />
-    </div>
+      <Box paddingX={3}>
+        <ListCategory />
+        <ListProduct />
+      </Box>
+    </Box>
   );
 }
