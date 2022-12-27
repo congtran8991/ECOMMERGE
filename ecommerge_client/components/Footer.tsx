@@ -1,9 +1,10 @@
 import { Text, Box } from "@chakra-ui/react";
+import PageWrapper from "../basicComponents/PageWrapper";
 
 export default function Footer() {
   return (
     <Box mt={5} bg={"var(--clr-gray-third)"}>
-      <Box padding={3} marginX="auto" width={["100%", "100%", "100%", "100%", "100%", "80%"]}>
+      <PageWrapper>
         <Text fontWeight={"bold"} textTransform={"uppercase"}>
           Địa chỉ
         </Text>
@@ -21,7 +22,7 @@ export default function Footer() {
           thứ 23 ngày 14/02/2022
         </Box>
         <Box>© 2022 - Bản quyền của Công ty TNHH Ti Ki</Box>
-      </Box>
+      </PageWrapper>
     </Box>
   );
 }
