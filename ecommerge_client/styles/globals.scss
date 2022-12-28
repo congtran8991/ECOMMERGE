@@ -14,16 +14,37 @@ a {
 	box-sizing: border-box;
 }
 :root {
+	--fz-miniSmall: 12px;
+	--fz-small: 14px;
+	--fz-middle: 16px;
+	--fz-large: 18px;
+	--fz-xLarge: 20px;
+	--fz-xxLarge: 22px;
+
 	--clr-white: #ffffff;
+	--clr-white-second: #fefefe;
 	--clr-black-primary: #475569;
 	--clr-green-primary: #2c7a7b;
 	--clr-green-second: #ccfbf1;
 	--clr-gray-primary: #f1f5f9;
-	--clr-gray-second: #767676;
-	--clr-gray-third: #d1d5db;
+	--clr-gray-second: #767676; // color for text
+	--clr-gray-third: #e5e7eb; // color for border
 }
 .bg-dashboard {
 	background: var(--clr-green-primary);
+}
+
+.text-page{
+	font-size: var(--fz-large);
+	font-weight: bold;
+}
+
+.text-title {
+	font-weight: bold;
+	font-size: var(--fz-middle);
+}
+.text-label {
+	font-size: var(--fz-small);
 }
 .custom-container {
 	width: 80%;

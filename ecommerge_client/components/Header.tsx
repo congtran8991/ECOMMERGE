@@ -2,15 +2,16 @@ import { Box } from "@chakra-ui/react";
 import LeftHeader from "./header/LeftHeader";
 import CenterHeader from "./header/CenterHeader";
 import RightHeader from "./header/RightHeader";
+import PageWrapper from "../basicComponents/PageWrapper";
 
 export default function Header() {
   return (
     <Box bg={"var(--clr-green-primary)"}>
-      <Box display={"flex"} alignItems={"center"}  width={"80%"} marginX={"auto"} height={24}>
+      <PageWrapper height={24} display={"flex"} alignItems={"center"}>
         <LeftHeader />
         <CenterHeader />
         <RightHeader />
-      </Box>
+      </PageWrapper>
     </Box>
   );
 }
