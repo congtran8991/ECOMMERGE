@@ -5,7 +5,7 @@ interface propsType {
   icon: JSX.Element;
   active: boolean;
 }
-export default function MenuItem(props: Partial<propsType>) {
+const MenuItem = (props: Partial<propsType>) => {
   const { active = false, text, icon } = props;
   const bg: string = active ? "var(--clr-gray-third)" : "";
   return (
@@ -19,3 +19,5 @@ export default function MenuItem(props: Partial<propsType>) {
     </ListItem>
   );
 }
+
+export default MenuItem

@@ -14,13 +14,13 @@ export default function DetailProduct() {
       <Box mt={3} mb={3}>
         Breadcum
       </Box>
-      <BoxWrapper>
+      <BoxWrapper mb={2}>
         <Flex p={5} gap={2} direction={["column", "column", "column", "row"]}>
           <Picture />
           <InformationProduct />
         </Flex>
       </BoxWrapper>
-      <BoxWrapper>
+      <BoxWrapper mb={2}>
         <Detail />
       </BoxWrapper>
       <BoxWrapper>
