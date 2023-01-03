@@ -15,7 +15,7 @@ const nextConfig = {
       {
         source: '/customer/:path*',
         destination: '/customer/:path*',
-      },
+      }
     ]
   },
 }
