@@ -8,15 +8,15 @@ const theme = {
   },
 };
 
-interface propsType {
+interface PropsType {
   children: JSX.Element;
-  width: any;
-  height: any;
-  mt: any;
-  mb: any;
+  width: string | number;
+  height: string | number;
+  mt: string | number;
+  mb: string | number;
 }
-export default function BoxWrapper(props: Partial<propsType>) {
-  const { children, width, height, mt, mb} = props;
+export default function BoxWrapper(props: Partial<PropsType>) {
+  const { children, width, height, mt, mb } = props;
   return (
     <Box
       borderRadius={10}

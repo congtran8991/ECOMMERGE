@@ -1,12 +1,12 @@
 import { ListItem } from "@chakra-ui/react";
 
-interface propsType {
+interface PropsType {
   title: string;
   icon: JSX.Element;
   active: boolean;
   urlAttr: string
 }
-const MenuItem = (props: Partial<propsType>) => {
+const MenuItem = (props: Partial<PropsType>) => {
   const { active = false, title, icon, urlAttr } = props;
   const bg: string = active ? "var(--clr-gray-third)" : "";
   return (
