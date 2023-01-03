@@ -8,19 +8,27 @@ const theme = {
   },
 };
 
-interface props {
+interface PropsType {
   children: JSX.Element;
+  width: string | number;
+  height: string | number;
+  mt: string | number;
+  mb: string | number;
 }
-export default function BoxWrapper(props: props) {
-  const { children } = props;
+export default function BoxWrapper(props: Partial<PropsType>) {
+  const { children, width, height, mt, mb } = props;
   return (
     <Box
+      borderRadius={10}
+      height={height}
+      width={width}
       boxShadow={"0px 1px 1px 0px rgb(0 0 0 / 5%)"}
-      mt={5}
       bg={"var(--clr-white-second)"}
       border={"1px"}
       borderColor={theme.color.grayThird}
-      px={4}
+      p={2}
+      mb={mb}
+      mt={mt}
     >
       {children}
     </Box>

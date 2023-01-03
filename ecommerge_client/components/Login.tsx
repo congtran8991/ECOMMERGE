@@ -16,11 +16,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-interface props {
+interface PropsType {
   isOpenLogin: boolean;
   setIsOpenLogin: any;
 }
-export default function Login(props: props) {
+export default function Login(props: PropsType) {
   const { isOpenLogin, setIsOpenLogin } = props;
   return (
     <>

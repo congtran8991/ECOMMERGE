@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-interface props {
+interface PropsType {
   isOpenRegister: boolean;
   setIsOpenRegister: any;
 }
@@ -23,7 +23,7 @@ interface props {
 const theme = {
   
 }
-export default function Register(props: props) {
+export default function Register(props: PropsType) {
   const { isOpenRegister, setIsOpenRegister } = props;
   return (
     <>
