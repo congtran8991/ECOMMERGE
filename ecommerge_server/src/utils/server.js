@@ -18,9 +18,29 @@ const isValidPassWord = (str) => {
   return str.length > 7 && str.length < 20;
 };
 
+const sendSuccess = (ctx, message, data = []) => {
+  return ctx.send({
+    code: 200,
+    message: message,
+    data,
+    status: true
+  });
+};
+
+const sendFailed = (ctx, message, data = []) => {
+  return ctx.send({
+    code: 400,
+    message,
+    data,
+    status: false
+  });
+};
+
 module.exports = {
   isPhone,
   isEmail,
   isValidUserName,
   isValidPassWord,
+  sendSuccess,
+  sendFailed
 };
