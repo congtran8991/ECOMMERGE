@@ -22,8 +22,7 @@ const sendSuccess = (ctx, message, data = []) => {
   return ctx.send({
     code: 200,
     message: message,
-    data,
-    status: true
+    data
   });
 };
 
@@ -32,7 +31,6 @@ const sendFailed = (ctx, message, data = []) => {
     code: 400,
     message,
     data,
-    status: false
   });
 };
 

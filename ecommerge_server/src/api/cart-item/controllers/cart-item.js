@@ -33,7 +33,8 @@ module.exports = createCoreController(
           });
         helper.sendSuccess(ctx, message.success, entries);
       } catch (error) {
-        helper.sendFailed(ctx, message.success);
+        const message = error.toString();
+        helper.sendFailed(ctx, message);
       }
     },
     async findOne(ctx) {
@@ -56,7 +57,7 @@ module.exports = createCoreController(
       }
     },
     async update(ctx) {
-      const { amount = 1 } = ctx.request.body;
+      const { amount = 1, id = "" } = ctx.request.body;
       const selectProduct = {
         select: selectField.arrProduct,
       };
@@ -64,16 +65,16 @@ module.exports = createCoreController(
         select: selectField.arrUsers,
       };
       try {
+        if (amount < 1) throw message.amount_not_found;
         const entries = await strapi.db
           .query("api::cart-item.cart-item")
           .update({
-            where: { id: 1 },
+            where: { id },
             populate: { product: selectProduct, users: selectUsers },
             data: {
               amount: amount,
             },
           });
-
         helper.sendSuccess(ctx, message.success, entries);
       } catch (error) {
         const message = error.toString();
@@ -87,7 +88,7 @@ module.exports = createCoreController(
           await strapi.db.query("api::cart-item.cart-item").create({
             data: {
               amount: amount,
-              product: idProduct, // id của product
+              product: idProduct,
               users: idUsers,
             },
           });
