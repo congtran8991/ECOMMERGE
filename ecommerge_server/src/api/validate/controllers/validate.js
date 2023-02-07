@@ -12,8 +12,9 @@ module.exports = {
     try {
       const requestBody = ctx.request.body;
       const { username, email, password, phone } = requestBody;
-      if (!username || !email || !password || !phone)
+      if (!username || !email || !password || !phone) {
         throw message.invalid_data;
+      }
       if (
         !(
           helper.isEmail(email) &&
@@ -21,19 +22,13 @@ module.exports = {
           helper.isValidPassWord(password) &&
           helper.isPhone(phone)
         )
-      )
+      ) {
         throw message.invalid_data;
-      ctx.send({
-        status: 200,
-        message: message.success,
-        data: true,
-      });
+      }
+      helper.sendSuccess(ctx, message.success, entries);
     } catch (error) {
-      ctx.send({
-        status: 400,
-        message: error,
-        data: false,
-      });
+      const message = error.toString();
+        helper.sendFailed(ctx, message);
     }
   },
   tokenVerify: async (ctx) => {
@@ -41,22 +36,15 @@ module.exports = {
     try {
       if (!token) throw message.authen_failed;
       // decrypt the jwt
-      const resultData = await strapi.plugins[
+      const entries = await strapi.plugins[
         "users-permissions"
       ].services.jwt.verify(token);
 
-      ctx.send({
-        status: 200,
-        message: message.success,
-        data: resultData,
-      });
+      helper.sendSuccess(ctx, message.success, entries);
       // send the decrypted object
     } catch (error) {
-      ctx.send({
-        status: 400,
-        message: error.toString(),
-        data: false,
-      });
+      const message = error.toString();
+        helper.sendFailed(ctx, message);
     }
   },
 };

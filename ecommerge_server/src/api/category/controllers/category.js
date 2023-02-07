@@ -1,29 +1,48 @@
-'use strict';
+"use strict";
+
+const message = require("../../../constants/message");
 
 /**
  * category controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::category.category', ({strapi}) => ({
-    async findMany(){
-        const arrFieldPopulate = ["parenId", "products"]
-        const entries = await strapi.db.query('api::category.category').findMany({
+module.exports = createCoreController(
+  "api::category.category",
+  ({ strapi }) => ({
+    async findMany(ctx) {
+      const arrFieldPopulate = ["parenId", "products"];
+      try {
+        const entries = await strapi.db
+          .query("api::category.category")
+          .findMany({
             populate: arrFieldPopulate,
-            where: { description: null }
-        });
-        return entries
+            where: { description: null },
+          });
+        helper.sendSuccess(ctx, message.success, entries);
+      } catch (error) {
+        const message = error.toString();
+        helper.sendFailed(ctx, message);
+      }
     },
-    async findOne(ctx, next){
-        const { id } = ctx.params
-        const arrFieldPopulate = ["parenId", "products"]
-        const entries = await strapi.db.query('api::category.category').findOne({
-            where: { 
-                id 
+    async findOne(ctx) {
+      const { id } = ctx.params;
+      const arrFieldPopulate = ["parenId", "products"];
+      try {
+        const entries = await strapi.db
+          .query("api::category.category")
+          .findOne({
+            where: {
+              id,
             },
-            populate: arrFieldPopulate
-        });
-        return entries
+            populate: arrFieldPopulate,
+          });
+        helper.sendSuccess(ctx, message.success, entries);
+      } catch (error) {
+        const message = error.toString();
+        helper.sendFailed(ctx, message);
+      }
     },
-}));
+  })
+);

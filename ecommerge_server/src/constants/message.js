@@ -16,4 +16,7 @@ module.exports = {
 	authen_failed: "No token, authorizaton denied",
 	not_permited: "You are not have permission",
 	token_expired: "Token expired",
+
+	// err param
+	amount_not_found: "amount phải lớn hơn 0"
 };
